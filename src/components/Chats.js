@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { ChatEngine } from "react-chat-engine";
-import { auth } from "../firebase";
 
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
