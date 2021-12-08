@@ -11,6 +11,12 @@ const Chats = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
 
+  const handleLogout = async () => {
+    await auth.signOut();
+
+    history.push("/");
+  };
+
   const getFile = async (url) => {
     const response = await fetch(url);
     const data = await response.blob();
@@ -62,8 +68,14 @@ const Chats = () => {
 
   return (
     <div className="chats-page">
+      <div className="nav-bar">
+        <div className="logo-tab">Messenger</div>
+        <div className="logout-tab" onClick={handleLogout}>
+          Logout
+        </div>
+      </div>
       <ChatEngine
-        height="100vh"
+        height="100%"
         projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
         userName={user.email}
         userSecret={user.uid}
