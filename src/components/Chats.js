@@ -11,6 +11,12 @@ const Chats = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
 
+  const handleLogout = async () => {
+    await auth.signOut();
+
+    history.push("/");
+  };
+
   const getFile = async (url) => {
     const response = await fetch(url);
     const data = await response.blob();
@@ -63,7 +69,7 @@ const Chats = () => {
   return (
     <div className="chats-page">
       <ChatEngine
-        height="100%"
+        height="100vh"
         projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
         userName={user.email}
         userSecret={user.uid}
