@@ -11,12 +11,6 @@ const Chats = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
 
-  const handleLogout = async () => {
-    await auth.signOut();
-
-    history.push("/");
-  };
-
   const getFile = async (url) => {
     const response = await fetch(url);
     const data = await response.blob();
