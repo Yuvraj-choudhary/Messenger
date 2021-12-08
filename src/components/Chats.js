@@ -69,7 +69,7 @@ const Chats = () => {
   return (
     <div className="chats-page">
       <div className="nav-bar">
-        <div className="logo-tab">Messenger</div>
+        <div className="logo-tab">Messenge</div>
         <div className="logout-tab" onClick={handleLogout}>
           Logout
         </div>
