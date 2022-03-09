@@ -2,7 +2,8 @@ import firebase from "firebase/app";
 import 'firebase/auth'
 
 export const auth = firebase.initializeApp ({
-authDomain: "messenger-36860.firebaseapp.com",
+apiKey: "AIzaSyDyU355u7GrgMCD6drWSGwSo8TftrakFpk",
+  authDomain: "messenger-36860.firebaseapp.com",
   projectId: "messenger-36860",
   storageBucket: "messenger-36860.appspot.com",
   messagingSenderId: "80849921731",
